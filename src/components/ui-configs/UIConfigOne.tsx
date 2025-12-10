@@ -11,7 +11,7 @@ export const UIConfigOne = ({ onToggle }: UIConfigOneProps) => {
       {/* Main Content Area */}
       <div className="flex-1 flex gap-4 min-h-0">
         {/* Left Column - Image Viewing Area */}
-        <Panel className="flex-1 min-w-0">
+        <Panel className="flex-1 min-w-0" interactive>
           <div className="flex-1 flex items-center justify-center text-muted-foreground">
             <span className="text-sm">Image Content</span>
           </div>
@@ -19,7 +19,7 @@ export const UIConfigOne = ({ onToggle }: UIConfigOneProps) => {
 
         {/* Right Column - Response */}
         <Panel 
-          className="w-80 min-h-0 cursor-pointer hover:border-primary/50 transition-colors" 
+          className="w-80 min-h-0" 
           title="LLM Generated Response"
           onClick={onToggle}
         >
@@ -31,31 +31,20 @@ export const UIConfigOne = ({ onToggle }: UIConfigOneProps) => {
       </div>
 
       {/* Prompt Buttons - Horizontal across bottom */}
-      <Panel className="shrink-0 py-2 px-3">
-        <div className="flex gap-2">
-          <Button
-            variant="outline"
-            className="flex-1 justify-center text-center h-auto py-3 px-4"
-          >
-            <span className="truncate">Pressable Prompt (LLM Generated)</span>
-          </Button>
-          <Button
-            variant="outline"
-            className="flex-1 justify-center text-center h-auto py-3 px-4"
-          >
-            <span className="truncate">Pressable Prompt (LLM Generated)</span>
-          </Button>
-          <Button
-            variant="outline"
-            className="flex-1 justify-center text-center h-auto py-3 px-4"
-          >
-            <span className="truncate">Pressable Prompt (LLM Generated)</span>
-          </Button>
-        </div>
-      </Panel>
+      <div className="shrink-0 flex gap-2">
+        <Panel className="flex-1 py-3 px-4 items-center justify-center" interactive>
+          <span className="text-sm truncate">Pressable Prompt (LLM Generated)</span>
+        </Panel>
+        <Panel className="flex-1 py-3 px-4 items-center justify-center" interactive>
+          <span className="text-sm truncate">Pressable Prompt (LLM Generated)</span>
+        </Panel>
+        <Panel className="flex-1 py-3 px-4 items-center justify-center" interactive>
+          <span className="text-sm truncate">Pressable Prompt (LLM Generated)</span>
+        </Panel>
+      </div>
 
       {/* Status Bar */}
-      <Panel className="shrink-0 py-2 px-4">
+      <Panel className="shrink-0 py-2 px-4" interactive>
         <div className="flex items-center justify-between text-sm text-muted-foreground">
           <span>Status Information</span>
           <span className="text-xs">Ready</span>

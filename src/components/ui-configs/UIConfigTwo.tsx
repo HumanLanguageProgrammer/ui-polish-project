@@ -12,7 +12,7 @@ export const UIConfigTwo = ({ onToggle }: UIConfigTwoProps) => {
       {/* Main Content Area */}
       <div className="flex-1 flex gap-4 min-h-0">
         {/* Left Column - Image Viewing Area */}
-        <Panel className="flex-1 min-w-0">
+        <Panel className="flex-1 min-w-0" interactive>
           <div className="flex-1 flex items-center justify-center text-muted-foreground">
             <span className="text-sm">Image Content</span>
           </div>
@@ -20,7 +20,7 @@ export const UIConfigTwo = ({ onToggle }: UIConfigTwoProps) => {
 
         {/* Right Column - Response */}
         <Panel 
-          className="w-80 min-h-0 cursor-pointer hover:border-primary/50 transition-colors" 
+          className="w-80 min-h-0" 
           title="LLM Generated Response"
           onClick={onToggle}
         >
@@ -43,7 +43,7 @@ export const UIConfigTwo = ({ onToggle }: UIConfigTwoProps) => {
       </Panel>
 
       {/* Status Bar */}
-      <Panel className="shrink-0 py-2 px-4">
+      <Panel className="shrink-0 py-2 px-4" interactive>
         <div className="flex items-center justify-between text-sm text-muted-foreground">
           <span>Status Information</span>
           <span className="text-xs">Ready</span>
