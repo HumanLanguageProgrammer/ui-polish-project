@@ -19,45 +19,42 @@ export const UIConfigOne = ({ onToggle }: UIConfigOneProps) => {
           </div>
         </Panel>
 
-        {/* Right Column - Response & Controls */}
-        <div className="w-80 flex flex-col gap-3 min-h-0">
-          {/* LLM Response Panel - Clickable to toggle */}
-          <Panel 
-            className="flex-1 min-h-0 cursor-pointer hover:border-primary/50 transition-colors" 
-            title="LLM Generated Response"
-            onClick={onToggle}
-          >
-            <div className="flex-1 overflow-auto text-sm text-foreground">
-              <p className="text-muted-foreground italic">Response will appear here...</p>
-              <p className="text-xs text-muted-foreground/60 mt-2">(Click to toggle input mode)</p>
-            </div>
-          </Panel>
-
-          {/* Prompt Buttons Panel */}
-          <Panel className="shrink-0" title="Pressable Prompts">
-            <div className="flex flex-col gap-2">
-              <Button
-                variant="outline"
-                className="w-full justify-start text-left h-auto py-3 px-4"
-              >
-                <span className="truncate">Pressable Prompt (LLM Generated)</span>
-              </Button>
-              <Button
-                variant="outline"
-                className="w-full justify-start text-left h-auto py-3 px-4"
-              >
-                <span className="truncate">Pressable Prompt (LLM Generated)</span>
-              </Button>
-              <Button
-                variant="outline"
-                className="w-full justify-start text-left h-auto py-3 px-4"
-              >
-                <span className="truncate">Pressable Prompt (LLM Generated)</span>
-              </Button>
-            </div>
-          </Panel>
-        </div>
+        {/* Right Column - Response */}
+        <Panel 
+          className="w-80 min-h-0 cursor-pointer hover:border-primary/50 transition-colors" 
+          title="LLM Generated Response"
+          onClick={onToggle}
+        >
+          <div className="flex-1 overflow-auto text-sm text-foreground">
+            <p className="text-muted-foreground italic">Response will appear here...</p>
+            <p className="text-xs text-muted-foreground/60 mt-2">(Click to toggle input mode)</p>
+          </div>
+        </Panel>
       </div>
+
+      {/* Prompt Buttons - Horizontal across bottom */}
+      <Panel className="shrink-0 py-2 px-3">
+        <div className="flex gap-2">
+          <Button
+            variant="outline"
+            className="flex-1 justify-center text-center h-auto py-3 px-4"
+          >
+            <span className="truncate">Pressable Prompt (LLM Generated)</span>
+          </Button>
+          <Button
+            variant="outline"
+            className="flex-1 justify-center text-center h-auto py-3 px-4"
+          >
+            <span className="truncate">Pressable Prompt (LLM Generated)</span>
+          </Button>
+          <Button
+            variant="outline"
+            className="flex-1 justify-center text-center h-auto py-3 px-4"
+          >
+            <span className="truncate">Pressable Prompt (LLM Generated)</span>
+          </Button>
+        </div>
+      </Panel>
 
       {/* Status Bar */}
       <Panel className="shrink-0 py-2 px-4">
