@@ -11,7 +11,7 @@ export const UIConfigFour = ({ onSwitchToText }: UIConfigFourProps) => {
       {/* Image Thumbnail - Large area at top */}
       <Panel className="flex-1 min-h-0" interactive>
         <div className="flex-1 flex items-center justify-center text-muted-foreground">
-          <span className="text-sm font-medium">Image Thumbnail</span>
+          <span className="text-sm font-medium">Image Display</span>
         </div>
       </Panel>
 

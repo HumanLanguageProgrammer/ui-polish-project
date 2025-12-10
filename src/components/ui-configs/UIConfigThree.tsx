@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Panel } from "@/components/panels/Panel";
 import { Input } from "@/components/ui/input";
 import { ArrowUp, Mic } from "lucide-react";
@@ -8,6 +9,12 @@ interface UIConfigThreeProps {
 }
 
 export const UIConfigThree = ({ onToggle, onSwitchToVoice }: UIConfigThreeProps) => {
+  const [isFullScreen, setIsFullScreen] = useState(false);
+
+  const toggleFullScreen = () => {
+    setIsFullScreen(prev => !prev);
+  };
+
   return (
     <div className="h-full w-full bg-background p-4 flex flex-col gap-3 overflow-hidden">
       {/* Main Content Area */}
@@ -16,20 +23,22 @@ export const UIConfigThree = ({ onToggle, onSwitchToVoice }: UIConfigThreeProps)
         <Panel 
           className="flex-1 min-h-0" 
           title="LLM Generated Response"
-          onClick={onToggle}
+          onClick={toggleFullScreen}
         >
           <div className="flex-1 overflow-auto text-sm text-foreground">
             <p className="text-muted-foreground italic">Response will appear here...</p>
-            <p className="text-xs text-muted-foreground/60 mt-2">(Click to toggle input mode)</p>
+            <p className="text-xs text-muted-foreground/60 mt-2">(Click to {isFullScreen ? 'minimize' : 'expand'})</p>
           </div>
         </Panel>
 
         {/* Right Column - Image Viewing Area (smaller) */}
-        <Panel className="w-56 min-w-0" interactive>
-          <div className="flex-1 flex items-center justify-center text-muted-foreground">
-            <span className="text-sm">Image Content</span>
-          </div>
-        </Panel>
+        {!isFullScreen && (
+          <Panel className="w-56 min-w-0" interactive>
+            <div className="flex-1 flex items-center justify-center text-muted-foreground">
+              <span className="text-sm">Image Content</span>
+            </div>
+          </Panel>
+        )}
       </div>
 
       {/* Text Input - Horizontal across bottom */}
