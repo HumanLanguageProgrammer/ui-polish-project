@@ -1,6 +1,6 @@
 import { Panel } from "@/components/panels/Panel";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { ArrowUp, Mic } from "lucide-react";
 
 interface UIConfigTwoProps {
   onToggle: () => void;
@@ -33,12 +33,23 @@ export const UIConfigTwo = ({ onToggle }: UIConfigTwoProps) => {
 
       {/* Text Input - Horizontal across bottom */}
       <Panel className="shrink-0 py-2 px-3" interactive>
-        <div className="flex gap-2">
+        <div className="flex items-center gap-2">
           <Input
             placeholder="Enter your message..."
-            className="flex-1"
+            className="flex-1 border-0 shadow-none focus-visible:ring-0 px-0"
           />
-          <Button>Next</Button>
+          <button 
+            className="shrink-0 p-2 rounded-full text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+            aria-label="Voice input"
+          >
+            <Mic className="h-5 w-5" />
+          </button>
+          <button 
+            className="shrink-0 p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+            aria-label="Send message"
+          >
+            <ArrowUp className="h-5 w-5" />
+          </button>
         </div>
       </Panel>
 
