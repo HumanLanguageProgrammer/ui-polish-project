@@ -4,9 +4,10 @@ import { ArrowUp, Mic } from "lucide-react";
 
 interface UIConfigTwoProps {
   onToggle: () => void;
+  onSwitchToVoice: () => void;
 }
 
-export const UIConfigTwo = ({ onToggle }: UIConfigTwoProps) => {
+export const UIConfigTwo = ({ onToggle, onSwitchToVoice }: UIConfigTwoProps) => {
   return (
     <div className="h-full w-full bg-background p-4 flex flex-col gap-3 overflow-hidden">
       {/* Main Content Area */}
@@ -39,8 +40,9 @@ export const UIConfigTwo = ({ onToggle }: UIConfigTwoProps) => {
             className="flex-1 border-0 shadow-none focus-visible:ring-0 px-0"
           />
           <button 
-            className="shrink-0 p-2 rounded-full text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
-            aria-label="Voice input"
+            onClick={onSwitchToVoice}
+            className="shrink-0 p-2 rounded-full text-muted-foreground hover:text-primary hover:bg-muted transition-colors"
+            aria-label="Switch to voice input"
           >
             <Mic className="h-5 w-5" />
           </button>

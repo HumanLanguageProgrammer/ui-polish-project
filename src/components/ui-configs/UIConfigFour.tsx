@@ -32,7 +32,7 @@ export const UIConfigFour = ({ onSwitchToText }: UIConfigFourProps) => {
             className="absolute right-4 p-2 text-muted-foreground hover:text-primary transition-colors"
             aria-label="Switch to text input"
           >
-            <Keyboard className="h-5 w-5" />
+            <Keyboard className="h-7 w-7" />
           </button>
         </div>
       </Panel>
