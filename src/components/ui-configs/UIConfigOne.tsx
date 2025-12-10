@@ -11,11 +11,9 @@ export const UIConfigOne = ({ onToggle }: UIConfigOneProps) => {
       {/* Main Content Area */}
       <div className="flex-1 flex gap-4 min-h-0">
         {/* Left Column - Image Viewing Area */}
-        <Panel className="flex-1 min-w-0 p-0">
-          <div className="flex-1 flex items-center justify-center text-muted-foreground w-full h-full">
-            <div className="border-2 border-dashed border-border rounded-lg w-full h-full flex items-center justify-center">
-              <span className="text-sm">Image Content</span>
-            </div>
+        <Panel className="flex-1 min-w-0">
+          <div className="flex-1 flex items-center justify-center text-muted-foreground">
+            <span className="text-sm">Image Content</span>
           </div>
         </Panel>
 
