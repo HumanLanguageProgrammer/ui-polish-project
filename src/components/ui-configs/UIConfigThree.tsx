@@ -24,7 +24,7 @@ export const UIConfigThree = ({ onToggle }: UIConfigThreeProps) => {
         </Panel>
 
         {/* Right Column - Image Viewing Area (smaller) */}
-        <Panel className="w-80 min-w-0" interactive>
+        <Panel className="w-56 min-w-0" interactive>
           <div className="flex-1 flex items-center justify-center text-muted-foreground">
             <span className="text-sm">Image Content</span>
           </div>
