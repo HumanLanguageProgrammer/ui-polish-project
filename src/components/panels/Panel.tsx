@@ -16,14 +16,14 @@ export const Panel = ({ children, className, title, onClick, interactive }: Pane
     <div
       onClick={onClick}
       className={cn(
-        "border border-border rounded-lg bg-card p-4 flex flex-col",
+        "border-2 border-border rounded-lg bg-card p-4 flex flex-col",
         isClickable && [
           "cursor-pointer",
           "transition-all duration-200 ease-out",
-          "hover:border-primary/40",
+          "hover:border-[3px] hover:border-primary/50",
           "hover:shadow-[0_0_0_1px_hsl(var(--primary)/0.1)]",
           "active:scale-[0.995]",
-          "active:border-primary/60",
+          "active:border-primary/70",
         ],
         className
       )}
