@@ -1,5 +1,5 @@
 import { Panel } from "@/components/panels/Panel";
-import { Button } from "@/components/ui/button";
+import { FullscreenPanel } from "@/components/panels/FullscreenPanel";
 
 interface UIConfigOneProps {
   onToggle: () => void;
@@ -11,11 +11,11 @@ export const UIConfigOne = ({ onToggle }: UIConfigOneProps) => {
       {/* Main Content Area */}
       <div className="flex-1 flex gap-4 min-h-0">
         {/* Left Column - Image Viewing Area */}
-        <Panel className="flex-1 min-w-0" interactive>
+        <FullscreenPanel className="flex-1 min-w-0">
           <div className="flex-1 flex items-center justify-center text-muted-foreground">
             <span className="text-sm">Image Content</span>
           </div>
-        </Panel>
+        </FullscreenPanel>
 
         {/* Right Column - Response */}
         <Panel 
@@ -44,12 +44,12 @@ export const UIConfigOne = ({ onToggle }: UIConfigOneProps) => {
       </div>
 
       {/* Status Bar */}
-      <Panel className="shrink-0 py-2 px-4" interactive>
+      <FullscreenPanel className="shrink-0 py-2 px-4">
         <div className="flex items-center justify-between text-sm text-muted-foreground">
           <span>Status Information</span>
           <span className="text-xs">Ready</span>
         </div>
-      </Panel>
+      </FullscreenPanel>
     </div>
   );
 };

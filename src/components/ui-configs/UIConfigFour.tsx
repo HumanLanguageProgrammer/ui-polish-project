@@ -1,4 +1,5 @@
 import { Panel } from "@/components/panels/Panel";
+import { FullscreenPanel } from "@/components/panels/FullscreenPanel";
 import { Mic, Keyboard } from "lucide-react";
 
 interface UIConfigFourProps {
@@ -8,12 +9,12 @@ interface UIConfigFourProps {
 export const UIConfigFour = ({ onSwitchToText }: UIConfigFourProps) => {
   return (
     <div className="h-full w-full bg-background p-4 flex flex-col gap-3 overflow-hidden">
-      {/* Image Thumbnail - Large area at top */}
-      <Panel className="flex-1 min-h-0" interactive>
+      {/* Image Display - Large area at top */}
+      <FullscreenPanel className="flex-1 min-h-0">
         <div className="flex-1 flex items-center justify-center text-muted-foreground">
           <span className="text-sm font-medium">Image Display</span>
         </div>
-      </Panel>
+      </FullscreenPanel>
 
       {/* Voice Input Panel - Mic button with keyboard switch */}
       <Panel className="shrink-0 py-3 px-4" interactive>
@@ -38,11 +39,11 @@ export const UIConfigFour = ({ onSwitchToText }: UIConfigFourProps) => {
       </Panel>
 
       {/* Status Bar */}
-      <Panel className="shrink-0 py-2 px-4" interactive>
+      <FullscreenPanel className="shrink-0 py-2 px-4">
         <div className="flex items-center justify-center text-sm text-muted-foreground">
           <span className="font-medium">Status Information</span>
         </div>
-      </Panel>
+      </FullscreenPanel>
     </div>
   );
 };

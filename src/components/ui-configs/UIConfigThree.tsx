@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Panel } from "@/components/panels/Panel";
+import { FullscreenPanel } from "@/components/panels/FullscreenPanel";
 import { Input } from "@/components/ui/input";
 import { ArrowUp, Mic } from "lucide-react";
 
@@ -33,11 +34,11 @@ export const UIConfigThree = ({ onToggle, onSwitchToVoice }: UIConfigThreeProps)
 
         {/* Right Column - Image Viewing Area (smaller) */}
         {!isFullScreen && (
-          <Panel className="w-56 min-w-0" interactive>
+          <FullscreenPanel className="w-56 min-w-0">
             <div className="flex-1 flex items-center justify-center text-muted-foreground">
               <span className="text-sm">Image Content</span>
             </div>
-          </Panel>
+          </FullscreenPanel>
         )}
       </div>
 
@@ -65,12 +66,12 @@ export const UIConfigThree = ({ onToggle, onSwitchToVoice }: UIConfigThreeProps)
       </Panel>
 
       {/* Status Bar */}
-      <Panel className="shrink-0 py-2 px-4" interactive>
+      <FullscreenPanel className="shrink-0 py-2 px-4">
         <div className="flex items-center justify-between text-sm text-muted-foreground">
           <span>Status Information</span>
           <span className="text-xs">Ready</span>
         </div>
-      </Panel>
+      </FullscreenPanel>
     </div>
   );
 };
