@@ -8,12 +8,12 @@ interface UIConfigTwoProps {
 
 export const UIConfigTwo = ({ onToggle }: UIConfigTwoProps) => {
   return (
-    <div className="h-full w-full bg-background p-4 flex flex-col gap-4 overflow-hidden">
+    <div className="h-full w-full bg-background p-4 flex flex-col gap-3 overflow-hidden">
       {/* Main Content Area */}
       <div className="flex-1 flex gap-4 min-h-0">
         {/* Left Column - Image Viewing Area */}
-        <Panel className="flex-1 min-w-0" title="Image Viewing Area">
-          <div className="flex-1 flex items-center justify-center text-muted-foreground">
+        <Panel className="flex-1 min-w-0 p-0">
+          <div className="flex-1 flex items-center justify-center text-muted-foreground w-full h-full">
             <div className="border-2 border-dashed border-border rounded-lg w-full h-full flex items-center justify-center">
               <span className="text-sm">Image Content</span>
             </div>
@@ -34,7 +34,7 @@ export const UIConfigTwo = ({ onToggle }: UIConfigTwoProps) => {
       </div>
 
       {/* Text Input - Horizontal across bottom */}
-      <Panel className="shrink-0" title="Text Input from User">
+      <Panel className="shrink-0 py-2 px-3">
         <div className="flex gap-2">
           <Input
             placeholder="Enter your message..."

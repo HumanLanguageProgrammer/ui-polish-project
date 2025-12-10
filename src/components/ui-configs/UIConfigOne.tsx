@@ -7,12 +7,12 @@ interface UIConfigOneProps {
 
 export const UIConfigOne = ({ onToggle }: UIConfigOneProps) => {
   return (
-    <div className="h-full w-full bg-background p-4 flex flex-col gap-4 overflow-hidden">
+    <div className="h-full w-full bg-background p-4 flex flex-col gap-3 overflow-hidden">
       {/* Main Content Area */}
       <div className="flex-1 flex gap-4 min-h-0">
         {/* Left Column - Image Viewing Area */}
-        <Panel className="flex-1 min-w-0" title="Image Viewing Area">
-          <div className="flex-1 flex items-center justify-center text-muted-foreground">
+        <Panel className="flex-1 min-w-0 p-0">
+          <div className="flex-1 flex items-center justify-center text-muted-foreground w-full h-full">
             <div className="border-2 border-dashed border-border rounded-lg w-full h-full flex items-center justify-center">
               <span className="text-sm">Image Content</span>
             </div>
@@ -20,7 +20,7 @@ export const UIConfigOne = ({ onToggle }: UIConfigOneProps) => {
         </Panel>
 
         {/* Right Column - Response & Controls */}
-        <div className="w-80 flex flex-col gap-4 min-h-0">
+        <div className="w-80 flex flex-col gap-3 min-h-0">
           {/* LLM Response Panel - Clickable to toggle */}
           <Panel 
             className="flex-1 min-h-0 cursor-pointer hover:border-primary/50 transition-colors" 
