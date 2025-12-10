@@ -32,7 +32,7 @@ export const UIConfigTwo = ({ onToggle }: UIConfigTwoProps) => {
       </div>
 
       {/* Text Input - Horizontal across bottom */}
-      <Panel className="shrink-0 py-2 px-3">
+      <Panel className="shrink-0 py-2 px-3" interactive>
         <div className="flex gap-2">
           <Input
             placeholder="Enter your message..."
