@@ -20,11 +20,15 @@ const Index = () => {
     setActiveConfig(2);
   };
 
+  const switchToVoiceMode = () => {
+    setActiveConfig(4);
+  };
+
   return (
     <div className="h-screen w-screen bg-background overflow-hidden">
       {activeConfig === 1 && <UIConfigOne onToggle={toggleConfig} />}
       {activeConfig === 2 && <UIConfigTwo onToggle={toggleConfig} />}
-      {activeConfig === 3 && <UIConfigThree onToggle={toggleConfig} />}
+      {activeConfig === 3 && <UIConfigThree onToggle={toggleConfig} onSwitchToVoice={switchToVoiceMode} />}
       {activeConfig === 4 && <UIConfigFour onSwitchToText={switchToTextMode} />}
     </div>
   );
